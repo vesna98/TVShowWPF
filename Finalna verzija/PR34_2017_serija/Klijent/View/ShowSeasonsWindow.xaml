@@ -1,0 +1,23 @@
+﻿<Window x:Class="Klijent.View.ShowSeasonsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Klijent.View"
+        mc:Ignorable="d"
+        Title="ShowSeasonsWindow" Height="450" Width="800" Background="#2e3137">
+    <Grid>
+        <Button Content="Dodaj sezonu"  Command="{Binding AddSeasonWindowCommand}"  Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="633,162,0,0" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.301,0.988"/>
+        <Button Content="Refresh"  Command="{Binding RefreshSeasonsCommand}" Background="#4CAF50" Foreground="White"  HorizontalAlignment="Left" Height="28" Margin="633,64,0,0" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.301,0.988"/>
+        <DataGrid  AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding BindingSeason}" SelectedItem="{Binding ChoosedSeason}" HorizontalAlignment="Left" Height="260" Margin="34,64,0,0" VerticalAlignment="Top" Width="553">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Br. sezone"  Binding="{Binding Number}" Width="100"/>
+                <DataGridTextColumn Header="TV serija id"  Binding="{Binding TvShow}" Width="*"/>
+                <!--<DataGridTextColumn Header="Id PlayList"  Binding="{Binding IDPL}" Width="*"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Izmeni sezonu"   Command="{Binding ChangeSeasonWindowCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="633,232,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button Content="Obrisi sezonu" Command="{Binding DeleteSeasonCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="633,296,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button Content="Prikazi epizode" Command="{Binding ShowEpisodesWindowCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="115" Margin="34,357,0,0"/>
+    </Grid>
+</Window>

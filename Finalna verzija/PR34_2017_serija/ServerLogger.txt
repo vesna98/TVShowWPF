@@ -1,0 +1,37 @@
+11:02:25,341 [5] INFO - Finding specific user from database
+11:02:43,860 [4] INFO - Getting tv show list from database
+11:05:15,509 [9] INFO - Getting one tv show from database
+11:05:18,554 [9] INFO - Tv show added to database
+11:05:22,720 [4] INFO - Getting tv show list from database
+11:06:01,960 [4] INFO - Getting one tv show from database
+11:06:02,430 [4] INFO - Tv show changed in database
+11:06:04,227 [10] INFO - Getting tv show list from database
+11:06:13,576 [11] INFO - Tv show deleted from database
+11:06:15,591 [10] INFO - Getting tv show list from database
+11:06:19,203 [10] INFO - Getting one tv show from database
+11:06:19,446 [10] INFO - Tv show added to database
+11:06:20,942 [4] INFO - Getting tv show list from database
+11:07:07,503 [4] INFO - Getting one tv show from database
+11:07:07,512 [4] WARN - Could not change tv show in database
+11:07:08,682 [6] INFO - Getting tv show list from database
+11:07:10,713 [6] INFO - Getting tv show list from database
+11:07:13,887 [5] INFO - Getting one tv show from database
+11:07:13,893 [5] WARN - Could not change tv show in database
+11:07:15,200 [6] INFO - Getting tv show list from database
+11:07:16,282 [4] INFO - Getting tv show list from database
+11:07:17,569 [5] INFO - Tv show deleted from database
+11:07:18,596 [4] INFO - Getting tv show list from database
+11:07:24,801 [4] INFO - Getting season list from database
+11:07:33,292 [6] INFO - Getting episode list from database.
+11:07:45,204 [5] INFO - Episode added to database
+11:07:46,807 [6] INFO - Getting episode list from database.
+11:07:55,187 [5] INFO - Getting episode list from database.
+11:07:55,220 [5] INFO - Successfuly changed episode in database.
+11:07:57,166 [6] INFO - Getting episode list from database.
+11:08:06,196 [6] INFO - Getting tv show list from database
+11:08:23,471 [6] INFO - Getting one tv show from database
+11:08:23,739 [6] INFO - Tv show changed in database
+11:08:29,935 [14] WARN - Could not delete tv show to database
+11:08:32,061 [11] INFO - Getting tv show list from database
+11:10:27,118 [13] INFO - Finding specific user from database
+11:10:27,229 [13] INFO - Getting tv show list from database

@@ -1,0 +1,24 @@
+﻿<Window x:Class="Klijent.View.AddTvShowWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Klijent.View"
+        mc:Ignorable="d"
+        Title="AddTvShowWindow" Height="340" Width="525" Background="#2e3137">
+    <Grid>
+        <Button Content="Add" Background="#4CAF50" Foreground="White" Command="{Binding AddNewTvShowCommand}" HorizontalAlignment="Left" Height="26" Margin="354,261,0,0" VerticalAlignment="Top" Width="136"/>
+        <TextBox HorizontalAlignment="Left" Height="32" Margin="74,60,0,0" TextWrapping="Wrap" Text="{Binding NewTvShow.Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+        <Label Content="Naziv" Foreground="White" HorizontalAlignment="Left"  Height="31" Margin="23,60,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.214,0.525"/>
+        <Label x:Name="label" Foreground="White" Content="Opis" HorizontalAlignment="Left" Margin="23,116,0,0" VerticalAlignment="Top" Height="38" RenderTransformOrigin="0.5,0.5" Width="51"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="146" Margin="74,116,0,0" TextWrapping="Wrap" Text="{Binding NewTvShow.Description, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+        <Label Content="Zanr" Foreground="White" HorizontalAlignment="Left" Height="42" Margin="299,60,0,0" VerticalAlignment="Top" Width="51"/>
+        <CheckBox Content="DRAMA" Foreground="White" IsChecked="{Binding CheckBoxes[0], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="24" Margin="354,66,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="2.09,0.852"/>
+        <CheckBox Content="ROMANCE" Foreground="White" IsChecked="{Binding CheckBoxes[1], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="33" Margin="354,105,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="-2.666,0.868"/>
+        <CheckBox Content="CRIME" Foreground="White" IsChecked="{Binding CheckBoxes[2], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="30" Margin="354,146,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="-2.666,0.868"/>
+        <CheckBox Content="MISTERY" Foreground="White" IsChecked="{Binding CheckBoxes[3], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="27" Margin="354,183,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="-2.666,0.868"/>
+        <CheckBox Content="COMEDY" Foreground="White" IsChecked="{Binding CheckBoxes[4], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="354,220,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="-2.666,0.868"/>
+        <Label x:Name="label1" Content="Dodajte seriju" Foreground="White" FontSize="20" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="280" Height="41"/>
+
+    </Grid>
+</Window>

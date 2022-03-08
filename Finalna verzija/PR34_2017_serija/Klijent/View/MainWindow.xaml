@@ -1,0 +1,42 @@
+﻿<Window x:Class="Klijent.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Klijent"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="630.185" Width="809.581" Background="#484848">
+    <Border Background="#2e3137" CornerRadius="0" Margin="20">
+        <Grid Margin="20,20,9.6,0">
+            <Label Content="Tv Show Aplikacija" Foreground="White" FontFamily="times new roman" FontSize="25" HorizontalAlignment="Center"></Label>
+            <Separator Margin="30,-202,35.4,252"></Separator>
+            <Button x:Name="button" Content="Odjavi se" VerticalAlignment="Center" HorizontalAlignment="Left" Height="32" Width="96"  Margin="604,58,0,455.8" Background="#545d6a" Foreground="White" Command="{Binding LogoutCommand}" RenderTransformOrigin="0.5,0.5">
+            </Button>
+            <Button x:Name="button1" Content="Izmeni profil" HorizontalAlignment="Left" VerticalAlignment="Center" Height="32" Margin="604,143,0,370.8" Width="96" Background="#545d6a" Foreground="White" Command="{Binding ProfileCommand}">
+            </Button>
+            <Button x:Name="button2" Content="Dodaj korsinika" VerticalAlignment="Center" Margin="604,101,0,411.8" Background="#545d6a" Foreground="White" Command="{Binding AddWindowCommand}" HorizontalAlignment="Left" Width="96" Height="32"/>
+            <Button Content="Dodaj TV seriju" HorizontalAlignment="Left" Height="30" Margin="577,287,0,0"  Background="#4CAF50" Foreground="White" VerticalAlignment="Top" Command="{Binding AddTvShowWindowCommand}"  Width="122"/>
+            <Button Content="Obrisi Tv seriju" Command="{Binding DeleteTvShowCommand}" HorizontalAlignment="Left" Background="#4CAF50" Foreground="White"  VerticalAlignment="Top" Width="122" Height="28" Margin="577,398,0,0" />
+            <Button Content="Izmeni TV seriju" Command="{Binding ChangeTvShowWindowCommand}" Height="28" Background="#4CAF50" Foreground="White" Margin="577,342,34.6,0" VerticalAlignment="Top"/>
+            <Button Content="Refresh" Command="{Binding RefreshTvShowCommand}" HorizontalAlignment="Left" Background="#4CAF50" Foreground="White" Height="27" VerticalAlignment="Top" Width="122" Margin="577,235,0,0" />
+            <Button Content="Pretraga"  Command="{Binding SearchTvShowCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#4CAF50" Foreground="White" Width="136" Height="32" Margin="404,80,0,0"/>
+            <TextBox HorizontalAlignment="Left" Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" Background="#545d6a" Foreground="White" TextWrapping="Wrap"  Width="347" Margin="30,80,0,432.8"/>
+            <Button Content="Dupliraj" Command="{Binding DuplicateTvShowCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="577,453,0,0" Height="27" RenderTransformOrigin="0.569,1.6"/>
+            <Button Content="Prikazi sezone" Command="{Binding ShowSeasonsWindowCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="136" Margin="30,490,0,0"/>
+            <Button Content="Logger info" Command="{Binding LogInfoWindowCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="96" Margin="30,47,0,0"/>
+            <DataGrid  AutoGenerateColumns="False" ItemsSource="{Binding BindingTvShow}" SelectedItem="{Binding ChoosedTvShow}" IsReadOnly="True" HorizontalAlignment="Left" Height="355" Margin="30,125,0,0" VerticalAlignment="Top" Width="510">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Showid}" Width="20"/>
+                    <DataGridTextColumn Header="TV serija"  Binding="{Binding Name}" Width="120"/>
+                    <DataGridTextColumn Header="Zanr"  Binding="{Binding Genres}" Width="40"/>
+                    <DataGridTextColumn Header="Description"  Binding="{Binding Description}" Width="*"/>
+                    <DataGridTextColumn Header="Br. sez."  Binding="{Binding SeasonCnt}" Width="50"/>
+                    <DataGridTextColumn Header="Br. ep."  Binding="{Binding EpisodeCnt}" Width="50"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Redo" Command="{Binding RedoCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="417,485,0,0" Height="27" RenderTransformOrigin="0.569,1.6"/>
+            <Button Content="Undo" Command="{Binding UndoCommand}" Background="#4CAF50" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="289,485,0,0" Height="27" RenderTransformOrigin="0.569,1.6"/>
+
+        </Grid>
+    </Border>
+</Window>

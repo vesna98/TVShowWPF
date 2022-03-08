@@ -1,0 +1,35 @@
+﻿<Window x:Class="Klijent.View.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Klijent.View"
+        
+        mc:Ignorable="d"
+        Title="ProfileWindow" Height="450" Width="300" Background="#484848">
+    <Border Background="#2e3137" CornerRadius="0" Margin="20">
+        <StackPanel Margin="20">
+            <Label Content="Izmena profila" Foreground="White" FontSize="25" HorizontalAlignment="Center"></Label>
+            <Button x:Name="CancelButton" Content="Nazad" Click="CancelButton_Click" Width="75" Height="23" Background="#4CAF50" Foreground="White" HorizontalAlignment="Right" Margin="0,5,20,5"  />
+
+            <Label Content="Ime" Foreground="White"></Label>
+            <TextBox  Name="txtName" Background="#545d6a" Foreground="White" FontSize="18" Text="{Binding ChangeUser.Name,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Label  Content="{Binding GreskaIme}" FontSize="12" Foreground="Red" Height="28" Margin="0,0,-0.4,0"></Label>
+            <Label Content="Prezime" Foreground="White"></Label>
+            <TextBox Name="txtLastname" Background="#545d6a" Foreground="White" FontSize="18" Text="{Binding ChangeUser.Lastname, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Label  Content="{Binding GreskaPrezime}" FontSize="12" Foreground="Red" Height="31" Margin="0,0,-0.4,0"></Label>
+
+
+            <Button x:Name="btnSubmit" Content="Izmeni" Margin="60,10,0,10" Background="#4CAF50" Foreground="White" Command="{Binding ChangeUserCommand}" Height="28" HorizontalAlignment="Left" Width="94" RenderTransformOrigin="0.485,1.09">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="2.182"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.137"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
+    </Border>
+</Window>
